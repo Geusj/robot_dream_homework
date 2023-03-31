@@ -1,12 +1,35 @@
-#мені здається я не зовсім зозумів завдання
-phone_book = {"Andrii": "+38054551", "Vitalii": "+380144", "Natalia": "+380145", "Victor": "+38015474",
-              "Nelia": "+38065651", "Julian": "+38014452"}
-stats = f"Number of entries: {len(phone_book.items())}"
+phone_book = {}
+
+while True:
+
+    name = input("Enter name:")
+    if name == "End":
+        break
+    second_name = input("Enter second name:")
+    phone_number = input("Enter phone number:")
+    birthday = input("Enter date of birth:")
+
+    phone_book[name] = {"second name:": second_name, "phone number:": phone_number,
+                        "date of birth:": birthday}
+
+# add new customer
+
+add = phone_book["Vova"] = "+3801"
+
+# delete any customer
+
+del phone_book["Vova"]
+
+# calculation customers
+
+stats = f"Number of entries: {len(phone_book.keys())}"
 print(stats)
-phone_book["Anna"] = "+380995566"
-del phone_book["Anna"]
-print(list(phone_book))
-for name, number in phone_book.items():
-    print(f"{name}: {number}")
-all_info = phone_book.get("Andrii")
-print(all_info)
+
+# list of oll customers(Names)
+
+list = dict.keys(phone_book)
+print(list)
+
+# information by name
+# working when you entered name "Andrii"
+show = print(phone_book["Andrii"])
