@@ -1,35 +1,27 @@
 phone_book = {}
 
 while True:
-
-    name = input("Enter name:")
-    if name == "End":
+    user_data = input("Enter data(use command :add,delete,stats,show,list):")
+    if user_data == "last":
         break
-    second_name = input("Enter second name:")
-    phone_number = input("Enter phone number:")
-    birthday = input("Enter date of birth:")
 
-    phone_book[name] = {"second name:": second_name, "phone number:": phone_number,
-                        "date of birth:": birthday}
+    data = user_data.split()
+    command = data[0]
+    name = data[1] if len(data) > 1 else None
 
-# add new customer
-
-add = phone_book["Vova"] = "+3801"
-
-# delete any customer
-
-del phone_book["Vova"]
-
-# calculation customers
-
-stats = f"Number of entries: {len(phone_book.keys())}"
-print(stats)
-
-# list of oll customers(Names)
-
-list = dict.keys(phone_book)
-print(list)
-
-# information by name
-# working when you entered name "Andrii"
-show = print(phone_book["Andrii"])
+    if command == "add":
+        phone = data[2]
+        if name and name not in phone_book:
+            phone_book[name] = phone
+    elif command == "delete":
+        if name and name in phone_book:
+            del phone_book[name]
+    elif command == "stats":
+        stats = f"Number of entries: {len(phone_book.keys())}"
+        print(stats)
+    elif command == "list":
+        names = list(phone_book.keys())
+        print(names)
+    elif command == "show":
+        if name and name in phone_book:
+            print(f"Name: {name}, Phone: {phone_book[name]}")
