@@ -14,16 +14,15 @@ while True:
         if name and name not in phone_book:
             phone_book[name] = phone
             try:
-                value = int(phone)
+                phone_book[name]= int(phone)
             except ValueError:
                 print("The phone number can only contain numbers")
     elif command == "delete":
         try:
-            value = phone_book[name]
+            del phone_book[name]
         except KeyError:
             print("This user is not in the phone book")
-        if name and name in phone_book:
-            del phone_book[name]
+
     elif command == "stats":
         stats = f"Number of entries: {len(phone_book.keys())}"
         print(stats)
