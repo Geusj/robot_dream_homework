@@ -1,0 +1,5 @@
+
+Помилка: int() base must be >= 2 and <= 36, or 0 виникла о Fri Apr 21 11:44:20 2023.
+Помилка: int() base must be >= 2 and <= 36, or 0 виникла о Fri Apr 21 11:45:13 2023.
+Помилка: int() can't convert non-string with explicit base виникла о Fri Apr 21 11:45:26 2023.
+Помилка: int() can't convert non-string with explicit base виникла о Fri Apr 21 11:45:49 2023.
