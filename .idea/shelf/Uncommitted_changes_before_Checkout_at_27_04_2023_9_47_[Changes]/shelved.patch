@@ -1,0 +1,13 @@
+Index: phone_book.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\"koka\": 123123, \"koko\": 23123123, \"boba\": 12312}
+===================================================================
+diff --git a/phone_book.json b/phone_book.json
+--- a/phone_book.json	
++++ b/phone_book.json	
+@@ -1,1 +1,1 @@
+-{"koka": 123123, "koko": 23123123, "boba": 12312}
+\ No newline at end of file
++{"koko": 23123123, "boba": 12312}
+\ No newline at end of file
