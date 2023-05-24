@@ -1,0 +1,10 @@
+[2023-05-24 15:06:08] Connected
+main> create table users
+      (
+          id         integer not null
+              primary key autoincrement,
+          first_name text    not null,
+          last_name  text,
+          age        integer
+      )
+[2023-05-24 15:06:08] completed in 9 ms

@@ -1,0 +1,18 @@
+main> create table users_dg_tmp
+      (
+          id         integer not null
+              primary key autoincrement,
+          first_name text    not null on conflict fail,
+          last_name  text    not null on conflict fail,
+          age        integer
+      )
+[2023-05-24 15:40:17] completed in 3 ms
+main> insert into users_dg_tmp(id, first_name, last_name, age)
+      select id, first_name, last_name, age
+      from users
+[2023-05-24 15:40:17] completed in 3 ms
+main> drop table users
+[2023-05-24 15:40:17] completed in 3 ms
+main> alter table users_dg_tmp
+          rename to users
+[2023-05-24 15:40:17] completed in 3 ms

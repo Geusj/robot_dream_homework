@@ -1,0 +1,14 @@
+[2023-05-24 15:17:53] Connected
+main> INSERT INTO users (first_name, last_name, age)
+      VALUES ('Andrii 1.0', 'Prysiazhniuk', 24),
+             ('Vova', 'Bodnar', 39)
+[2023-05-24 15:17:53] 2 rows affected in 5 ms
+main> INSERT INTO users (first_name, last_name, age)
+      VALUES ('Andrii 1.0', 'Prysiazhniuk', 24),
+             ('Vova', 'Bodnar', 39),
+             ('Lola', 'kola', 21),
+             ('Vova 1', 'Bodnar', 39),
+             ('Lola 1', 'kola', 21),
+             ('Vova 2', 'Bodnar', 39),
+             ('Lola 2', 'kola', 21)
+[2023-05-24 15:21:22] 7 rows affected in 5 ms
