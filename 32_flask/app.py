@@ -94,6 +94,7 @@ def get_user_by_id(user_id):
         return '404 Not Found', 404
 
 
+
 @app.get('/books/<string:title>')
 def get_book_by_title(title):
     transformed_title = title.capitalize()
