@@ -94,7 +94,6 @@ def get_user_by_id(user_id):
         return '404 Not Found', 404
 
 
-
 @app.get('/books/<string:title>')
 def get_book_by_title(title):
     transformed_title = title.capitalize()
@@ -141,7 +140,6 @@ def validate_username(username):
     if len(username) >= 5:
         return True
     return False
-
 
 
 def validate_password(password):
