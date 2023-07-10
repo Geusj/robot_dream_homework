@@ -1,0 +1,20 @@
+create table users_dg_tmp_dg_tmp
+(
+    id         integer not null
+        primary key,
+    first_name text    not null,
+    last_name  text    not null,
+    age        integer,
+    constraint unique_combination
+        unique (first_name, last_name)
+);
+
+insert into users_dg_tmp_dg_tmp(id, first_name, last_name, age)
+select id, first_name, last_name, age
+from users_dg_tmp;
+
+drop table users_dg_tmp;
+
+alter table users_dg_tmp_dg_tmp
+    rename to users_dg_tmp;
+
