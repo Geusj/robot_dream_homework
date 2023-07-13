@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('style', filename='style/styles.css') }}">
+</head>
+<body>
+    <h1>Users</h1>
+    <ul>
+        {% for name in names %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
