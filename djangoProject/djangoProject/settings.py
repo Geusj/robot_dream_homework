@@ -36,7 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user.apps.UserConfig'
+    'users.apps.UserConfig',
+    'books.apps.BooksConfig',
+    'purchases.apps.PurchasesConfig',
+
+
 ]
 
 MIDDLEWARE = [
@@ -125,3 +129,5 @@ SECRET_KEY_2 = os.getenv('01012023040499')
 DB_NAME = os.getenv('andrii')
 DB_USER = os.getenv('andrii')
 DB_PASSWORD = os.getenv('0996378547mAiLrU')
+
+AUTH_USER_MODEL = 'users.User'
