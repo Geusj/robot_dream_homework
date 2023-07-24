@@ -9,3 +9,9 @@ class User(AbstractUser):
 
     class Meta:
         db_table = 'users'
+
+    def __str__(self):
+        return f"{self.id}: {self.get_full_name()}"
+
+    class Meta:
+        db_table = 'users'

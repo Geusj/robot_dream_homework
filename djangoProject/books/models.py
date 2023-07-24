@@ -11,5 +11,6 @@ class Books(models.Model):
         unique_together = ['title', 'author']  # В Book title та author разом мають бути унікальними.
         db_table = 'books'
 
-    def __str__(self):
+
+def __str__(self):
         return f"{self.title} - {self.author}"

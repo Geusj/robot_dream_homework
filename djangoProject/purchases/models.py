@@ -7,7 +7,8 @@ class Purchases(models.Model):
     date_of_purchase = models.DateField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    class Meta:
+
+class Meta:
         db_table = 'purchases'
         ordering = ['-date_of_purchase']  # порядок сортування на сортування за датою у порядку спадання.
 
